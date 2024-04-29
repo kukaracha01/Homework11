@@ -9,6 +9,10 @@ public class Main {
         int clientOS = 0;
         checkClientOSAndDeviceYear(clientDeviceYear, clientOS);
 
+        System.out.println("Task3");
+        int deliveryDistance = 43;
+        checkDeliveryDistance(deliveryDistance);
+
     }
 
     public static void checkLeapYear(int yearNew) {
@@ -43,6 +47,24 @@ public class Main {
 
         }
         return;
+    }
+
+    public static void checkDeliveryDistance(int distance) {
+        int days = 1;
+        if (distance < 20) {
+            System.out.println("Потребуется дней: " + days);
+            return;
+        }
+        if (distance >= 20 && distance <= 60) {
+            days = days + 1;
+            System.out.println("Потребуется дней: " + days);
+            return;
+        }
+        if (distance > 60 && distance <= 100) {
+            days = days + 2;
+            System.out.println("Потребуется дней: " + days);
+            return;
+        }
     }
 }
 
